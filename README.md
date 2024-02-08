@@ -1,4 +1,2 @@
-```js
-$ npm i
-$ npm install react-p5
-```
+- _🟡 todo:_ not for mobile
+- _🟢 done:_ works out
