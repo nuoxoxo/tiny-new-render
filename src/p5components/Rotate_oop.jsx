@@ -5,13 +5,6 @@ const Rotate_oop = () => {
 
   const Offset = 42
   const Usize = 42
-  const Bright_gold = p5.color("rgb(250,215,0,100)")
-  const Bright_green = p5.color("hex('#AAFF00')")
-  const Colors = [
-    Bright_gold,
-    Bright_green
-  ]
-  const Color = Colors[Math.floor(Math.random() * Colors.length)]
 
   class Something {
     constructor(r, c, size) {
@@ -58,6 +51,14 @@ const Rotate_oop = () => {
     */
 
     p5.createCanvas(800, 800).parent(canvasParentRef)
+
+    const Bright_gold = p5.color("rgb(250,215,0,100)")
+    const Bright_green = p5.color("hex('#AAFF00')")
+    const Colors = [
+      Bright_gold,
+      Bright_green
+    ]
+    const Color = Colors[Math.floor(Math.random() * Colors.length)]
     
     p5.rectMode(p5.CENTER)
     p5.angleMode(p5.DEGREES)
