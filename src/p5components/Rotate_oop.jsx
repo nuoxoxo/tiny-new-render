@@ -52,8 +52,8 @@ const Rotate_oop = () => {
 
     p5.createCanvas(800, 800).parent(canvasParentRef)
 
-    const Bright_gold = p5.color("rgb(250,215,0,100)")
-    const Bright_green = p5.color("hex('#AAFF00')")
+    const Bright_gold = p5.color(250,215,0,100)
+    const Bright_green = p5.color('#AAFF00')
     const Colors = [
       Bright_gold,
       Bright_green
