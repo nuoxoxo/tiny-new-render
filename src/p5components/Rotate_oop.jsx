@@ -5,6 +5,13 @@ const Rotate_oop = () => {
 
   const Offset = 42
   const Usize = 42
+  const Bright_gold = p5.color("rgb(250,215,0,100)")
+  const Bright_green = p5.color("hex('#AAFF00')")
+  const Colors = [
+    Bright_gold,
+    Bright_green
+  ]
+  const Color = Colors[Math.floor(Math.random() * Colors.length)]
 
   class Something {
     constructor(r, c, size) {
@@ -55,7 +62,7 @@ const Rotate_oop = () => {
     p5.rectMode(p5.CENTER)
     p5.angleMode(p5.DEGREES)
     p5.noStroke()
-    const Bright_gold = p5.color("rgb(250,215,0,100)")
+    
     R = p5.height / unit_size
     C = p5.width / unit_size
     let r = -1
@@ -64,7 +71,7 @@ const Rotate_oop = () => {
       let c = -1
       things[r] = []
       while (++c < C) {
-        p5.fill(Bright_gold)
+        p5.fill( Color )
         things[r][c] = new Something(
           unit_size / 2 + r * unit_size,
           unit_size / 2 + c * unit_size,
