@@ -14,7 +14,7 @@ const Rotate_oop = () => {
       this.size = size
     }
 
-    _rotate(p5) { // passing p5 instance HERE, let p5.func get through
+    _rotate( p5 ) { // passing p5 instance HERE, let p5.func get through
       p5.push()
       p5.translate(this.c, this.r)
       let angle = p5.atan2(p5.mouseY - this.r, p5.mouseX - this.c)
@@ -27,6 +27,8 @@ const Rotate_oop = () => {
   let unit_size = Usize
   let things = []
   let R, C // used later in draw
+
+  let RandomColor
 
   const setup = (p5, canvasParentRef) => {
 
@@ -58,7 +60,7 @@ const Rotate_oop = () => {
       Bright_gold,
       Bright_green
     ]
-    const Color = Colors[Math.floor(Math.random() * Colors.length)]
+    RandomColor = Colors[Math.floor(Math.random() * Colors.length)]
     
     p5.rectMode(p5.CENTER)
     p5.angleMode(p5.DEGREES)
@@ -72,7 +74,7 @@ const Rotate_oop = () => {
       let c = -1
       things[r] = []
       while (++c < C) {
-        p5.fill( Color )
+        p5.fill( RandomColor )
         things[r][c] = new Something(
           unit_size / 2 + r * unit_size,
           unit_size / 2 + c * unit_size,
@@ -82,7 +84,7 @@ const Rotate_oop = () => {
     }
   }
 
-  const draw = (p5) => {
+  const draw = ( p5 ) => {
     p5.background(0)
     let r = -1, c
     while (++r < R) {
