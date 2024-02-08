@@ -1,2 +1,3 @@
+- _🟢 done:_ switched to `p5` from `react-p5`
 - _🟡 todo:_ not for mobile
 - _🟢 done:_ works out
